@@ -9,8 +9,8 @@ on:
       - production
 
 jobs:
-  hello_world:
+  hello_word:
     runs-on: ubuntu latest
     steps:
-      - name: Checkout code
-      - run: echo "Hello world"
+      - name: "Print hello wrold"
+        run: echo "Hello world"
