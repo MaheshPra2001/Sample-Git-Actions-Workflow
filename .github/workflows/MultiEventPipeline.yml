@@ -9,6 +9,7 @@ on:
         - master
 jobs:
     on-push: # job name
+        if: github.event_name == 'push' # Condition to run the job
         runs-on: ubuntu-latest
         steps: # Steps to be executed in the job
             - name: "Running on master push" # Step 1
