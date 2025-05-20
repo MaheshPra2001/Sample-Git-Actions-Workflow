@@ -20,3 +20,10 @@ jobs:
         steps: # Steps to be executed in the job  
             - name: "Running on pull request"
               run: echo "Running on pull request"
+
+    on-workflow-dispatch: # job 3
+        if: github.event_name == 'push' # Condition to run the job
+        runs-on: ubuntu-latest
+        steps: # Steps to be executed in the job
+            - name: "Running on master push" # Step 1
+              run: echo "Running on master push"
